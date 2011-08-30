@@ -1,0 +1,40 @@
+GeoNames DataSource
+
+A CakePHP DataSource for interfacing with the GeoNames Web Service
+
+INSTALLATION
+------------
+
+Copy GeoNamesSource.php to your app/Model/Datasource directory
+
+CONFIGURATION
+---------------
+
+1. Add the following to app/Config/database.php:
+
+    public $geoNames = array(
+        'datasource' => 'GeoNamesSource',
+        'username' => 'myusername',
+		'cache' => true
+    );
+
+2. Add the following to your model:
+
+    public $useDbConfig = 'geoNames';
+    public $useTable = false;
+
+USAGE
+---------------
+
+The following example shows how to perform a postal code search from within a controller action:
+
+    $data = $this->Model->postalCodeSearch(array(
+        'postalcode' => 9011,
+        'maxRows' => 10
+    ));
+
+LICENSE
+-------
+
+The files in this archive are released under the new BSD license. You can find a
+copy of this license in LICENSE.

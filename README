@@ -18,7 +18,8 @@ CONFIGURATION
 	'cache' => true
     );
 
-   Or you may optionally specify a token and/or a different server if you subscribe to a commercial GeoNames plan:
+   Or you may optionally specify a token and/or a different server
+   if you subscribe to a commercial GeoNames plan:
 
     public $geoNames = array(
         'datasource' => 'GeoNamesSource',
@@ -28,7 +29,10 @@ CONFIGURATION
 	'cache' => true
     );
 
-   The valid values for server are 'commercial' or 'secure'. If you don't specify a server, the public server is used. If you specify 'secure', make sure you have installed the php_openssl extension or the request will fail.
+   The valid values for server are 'commercial' or 'secure'. If you
+   don't specify a server, the public server is used. If you specify
+   'secure', make sure you have installed the php_openssl extension
+   or the request will fail.
 
 2. Add the following to your model:
 
